@@ -43,7 +43,6 @@ ol {
 .content {
   display: grid;
   grid-template-columns: 711px 399px;
-  grid-template-rows: 534px;
   gap: 30px;
   justify-content: center;
   align-content: center;
@@ -114,7 +113,7 @@ ol {
 }
 
 .search-form__textfield {
-  color: inherit;
+  color: rgb(255, 255, 255 / 0.7);
   font-family: inherit;
   font-size: inherit;
   font-style: inherit;
@@ -239,11 +238,11 @@ ol {
   margin-bottom: 30px;
 }
 
-.content__list-item:active {
+.content__card-link:active {
   background-color: #545050;
 }
 
-.content__list-item:hover {
+.content__card-link:hover {
   text-decoration: underline;
 }
 
@@ -269,10 +268,15 @@ ol {
 .content__video-card {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+  overflow: hidden;
 }
 
 .content__video-card-description-container {
   padding-top: 6px;
+  flex: 1;
+  min-width: 0;
 }
 
 .content__video-card-title {
@@ -284,6 +288,11 @@ ol {
   line-height: 1;
   text-transform: uppercase;
   margin-bottom: 6px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
+  min-width: 0;
 }
 
 .content__video-card-description {
@@ -293,6 +302,10 @@ ol {
   font-style: normal;
   font-weight: 400;
   line-height: 0.9;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
 }
 
 .content__video-card-thumbnail {
